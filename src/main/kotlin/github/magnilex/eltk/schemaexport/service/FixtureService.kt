@@ -1,4 +1,4 @@
-package github.magnilex.eltk.fixtureimporter.service
+package github.magnilex.eltk.schemaexport.service
 
 import org.jsoup.Jsoup.connect
 import org.jsoup.nodes.Document

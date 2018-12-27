@@ -1,6 +1,6 @@
-package github.magnilex.eltk.fixtureimporter.service
+package github.magnilex.eltk.schemaexport.service
 
-import github.magnilex.eltk.fixtureimporter.CalendarEventCsvRow
+import github.magnilex.eltk.schemaexport.CalendarEventCsvRow
 import java.io.File
 
 fun exportToCsv(fixtures: Fixtures, player: String, filename: String): Int {

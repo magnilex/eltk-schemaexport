@@ -1,16 +1,32 @@
-package github.magnilex.eltk.fixtureimporter.gui
+package github.magnilex.eltk.schemaexport.gui
 
-import github.magnilex.eltk.fixtureimporter.service.Fixtures
-import github.magnilex.eltk.fixtureimporter.service.exportToCsv
-import github.magnilex.eltk.fixtureimporter.service.getFixtures
-import github.magnilex.eltk.fixtureimporter.service.getGroups
+import github.magnilex.eltk.schemaexport.service.Fixtures
+import github.magnilex.eltk.schemaexport.service.exportToCsv
+import github.magnilex.eltk.schemaexport.service.getFixtures
+import github.magnilex.eltk.schemaexport.service.getGroups
 import javafx.beans.property.SimpleStringProperty
 import javafx.geometry.Orientation.HORIZONTAL
 import javafx.scene.control.Alert.AlertType.INFORMATION
 import javafx.stage.FileChooser.ExtensionFilter
-import javafx.stage.Stage
-import tornadofx.*
 import tornadofx.FileChooserMode.Save
+import tornadofx.View
+import tornadofx.action
+import tornadofx.alert
+import tornadofx.button
+import tornadofx.chooseFile
+import tornadofx.combobox
+import tornadofx.disableWhen
+import tornadofx.fieldset
+import tornadofx.form
+import tornadofx.group
+import tornadofx.hbox
+import tornadofx.hboxConstraints
+import tornadofx.observableList
+import tornadofx.onChange
+import tornadofx.paddingHorizontal
+import tornadofx.paddingVertical
+import tornadofx.textfield
+import tornadofx.vbox
 
 class MainView : View() {
     val groups = getGroups()
@@ -58,14 +74,5 @@ class MainView : View() {
                 }
             }
         }
-    }
-}
-
-class EltkFixtureExporter : App(MainView::class) {
-    override fun start(stage: Stage) {
-        stage.minHeight = 200.0
-        stage.minWidth = 400.0
-        stage.isResizable = false
-        super.start(stage)
     }
 }

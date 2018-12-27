@@ -1,6 +1,6 @@
-package github.magnilex.eltk.fixtureimporter
+package github.magnilex.eltk.schemaexport
 
-import github.magnilex.eltk.fixtureimporter.service.Fixture
+import github.magnilex.eltk.schemaexport.service.Fixture
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.Locale
